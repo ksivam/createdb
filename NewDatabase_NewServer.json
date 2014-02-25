@@ -34,7 +34,7 @@
   "resources": [
     {
       "name": "[parameters('serverName')]",
-      "type": "Microsoft.SQLDatabase/Server",
+      "type": "Microsoft.Sql/servers",
       "location": "[parameters('location')]",
       "properties": {
         "version": "2.0",
@@ -44,7 +44,7 @@
       "resources": [
         {
           "name": "[parameters('databaseName')]",
-          "type": "Microsoft.SQLDatabase/DatabaseServer/Database",
+          "type": "Microsoft.Sql/servers/databases",
           "properties": {
             "edition": "Web",
             "collation": "[parameters('collation')]",
