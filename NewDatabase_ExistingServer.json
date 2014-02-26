@@ -25,7 +25,7 @@
       "apiVersion": "01-01-2014",
       "resources": [
         {
-          "name": "tempdb",
+          "name": "[parameters('databaseName')]",
           "type": "databases",
           "apiVersion": "01-01-2014",
           "properties": {
