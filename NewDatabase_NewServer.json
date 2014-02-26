@@ -26,7 +26,8 @@
       "type": "string"
     }
   },
-  "variables": {},
+  "variables": {
+  },
   "resources": [
     {
       "name": "[parameters('serverName')]",
@@ -37,12 +38,11 @@
         "version": "2.0",
         "administratorLogin": "[parameters('administratorLogin')]",
         "administratorLoginPassword": "[parameters('administratorLoginPassword')]"
-      }
-      }],
+      },
       "resources": [
-      {
+        {
           "name": "[parameters('databaseName')]",
-          "type": "Microsoft.Sql/servers/databases",
+          "type": "databases",
           "apiVersion": "01-01-2014",
           "properties": {
             "edition": "Web",
@@ -50,11 +50,13 @@
             "maxSizeBytes": "1073741824"
           }
         }
-        ],
+      ]
+    }
+  ],
   "outputs": {
     "connectionString": {
       "type": "string",
-      "value": "[reference('[parameters('serverName')]').properties.connectionString]"
+      "value": "[reference(parameters('serverName')).properties.connectionString]"
     }
   }
 }
