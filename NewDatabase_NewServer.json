@@ -33,7 +33,7 @@
       "name": "[parameters('serverName')]",
       "type": "Microsoft.Sql/servers",
       "location": "[parameters('location')]",
-      "apiVersion": "01-01-2014",
+      "apiVersion": "2.0",
       "properties": {
         "version": "2.0",
         "administratorLogin": "[parameters('administratorLogin')]",
@@ -43,7 +43,7 @@
         {
           "name": "[parameters('databaseName')]",
           "type": "databases",
-          "apiVersion": "01-01-2014",
+          "apiVersion": "2.0",
           "dependsOn": [ "[concat('Microsoft.Sql/servers/', parameters('serverName'))]" ],
           "properties": {
             "edition": "Web",
