@@ -20,27 +20,14 @@
   "variables": {},
   "resources": [
     {
-      "name": "[parameters('serverName')]",
-      "type": "Microsoft.Sql/servers",
-      "apiVersion": "01-01-2014",
-      "resources": [
-        {
-          "name": "[parameters('databaseName')]",
-          "type": "databases",
-          "apiVersion": "01-01-2014",
-          "properties": {
-            "edition": "Web",
-            "collation": "[parameters('collation')]",
-            "maxSizeBytes": "1073741824"
-          }
-        }
-      ]
+       "name": "[concat(parameters('serverName'), '/', parameters('databaseName'))]",
+       "type": "Microsoft.Sql/servers/databases",
+       "apiVersion": "2.0",
+       "properties": {
+         "edition": "Web",
+         "collation": "[parameters('collation')]",
+         "maxSizeBytes": "1073741824"
+       }
     }
-  ],
-  "outputs": {
-    "connectionString": {
-      "type": "string",
-      "value": "[reference(parameters('serverName')).properties.connectionString]"
-    }
-  }
+  ]
 }
