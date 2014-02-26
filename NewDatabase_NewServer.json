@@ -38,8 +38,7 @@
         "administratorLogin": "[parameters('administratorLogin')]",
         "administratorLoginPassword": "[parameters('administratorLoginPassword')]"
       },
-      "resources": [
-        {
+      {
           "name": "[parameters('databaseName')]",
           "type": "Microsoft.Sql/servers/databases",
           "apiVersion": "01-01-2014",
@@ -49,7 +48,6 @@
             "maxSizeBytes": "1073741824"
           }
         }
-      ]
     }
   ],
   "outputs": {
