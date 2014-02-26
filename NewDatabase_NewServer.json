@@ -11,7 +11,7 @@
       "type": "string"
     },
     "administratorLoginPassword": {
-      "type": "secretstring"
+      "type": "string"
     },
     "databaseName": {
       "type": "string"
