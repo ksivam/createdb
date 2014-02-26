@@ -26,7 +26,7 @@
       "resources": [
         {
           "apiVersion": "01-01-2014",
-          "name": "csmsqldb1",          
+          "name": "csmsqldb1",
           "type": "Microsoft.Sql/servers/databases",
           "properties": {
             "edition": "Web",
