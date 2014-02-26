@@ -1,9 +1,5 @@
 {
-  "name": "newDatabaseExistingServer",
   "schemaVersion": "2014-01.1.0-preview",
-  "tags": {
-    "foo": "bar"
-  },
   "parameters": {
     "serverName": {
       "type": "string"
@@ -26,8 +22,10 @@
     {
       "name": "[parameters('serverName')]",
       "type": "Microsoft.Sql/servers",
+      "apiVersion": "01-01-2014",
       "resources": [
         {
+          "apiVersion": "01-01-2014",
           "name": "[parameters('databaseName')]",
           "type": "Microsoft.Sql/servers/databases",
           "properties": {
