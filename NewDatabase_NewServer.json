@@ -35,7 +35,6 @@
       "location": "[parameters('location')]",
       "apiVersion": "2.0",
       "properties": {
-        "version": "1.0",
         "administratorLogin": "[parameters('administratorLogin')]",
         "administratorLoginPassword": "[parameters('administratorLoginPassword')]"
       },
