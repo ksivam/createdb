@@ -32,6 +32,7 @@
       "name": "[parameters('serverName')]",
       "type": "Microsoft.Sql/servers",
       "location": "[parameters('location')]",
+      "apiVersion": "01-01-2014",
       "properties": {
         "version": "2.0",
         "administratorLogin": "[parameters('administratorLogin')]",
@@ -41,6 +42,7 @@
         {
           "name": "[parameters('databaseName')]",
           "type": "Microsoft.Sql/servers/databases",
+          "apiVersion": "01-01-2014",
           "properties": {
             "edition": "Web",
             "collation": "[parameters('collation')]",
