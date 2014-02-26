@@ -44,7 +44,7 @@
           "name": "[parameters('databaseName')]",
           "type": "databases",
           "apiVersion": "01-01-2014",
-          "dependsOn": [ "[concat('Microsoft.Sql/servers/', parameters('serverName')]" ],
+          "dependsOn": [ "[concat('Microsoft.Sql/servers/', parameters('serverName'))]" ],
           "properties": {
             "edition": "Web",
             "collation": "[parameters('collation')]",
