@@ -37,7 +37,9 @@
         "version": "2.0",
         "administratorLogin": "[parameters('administratorLogin')]",
         "administratorLoginPassword": "[parameters('administratorLoginPassword')]"
-      },
+      }
+      }],
+      "resources": [
       {
           "name": "[parameters('databaseName')]",
           "type": "Microsoft.Sql/servers/databases",
@@ -48,8 +50,7 @@
             "maxSizeBytes": "1073741824"
           }
         }
-    }
-  ],
+        ],
   "outputs": {
     "connectionString": {
       "type": "string",
