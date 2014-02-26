@@ -26,9 +26,9 @@
       "resources": [
         {
           "apiVersion": "01-01-2014",
+          "name": "csmsqldb1",          
           "type": "Microsoft.Sql/servers/databases",
           "properties": {
-            "name": "csmsqldb1",
             "edition": "Web",
             "collation": "[parameters('collation')]",
             "maxSizeBytes": "1073741824"
