@@ -42,6 +42,7 @@
         {
           "name": "[parameters('databaseName')]",
           "type": "databases",
+          "location": "[parameters('location')]",
           "apiVersion": "2.0",
           "dependsOn": [ "[concat('Microsoft.Sql/servers/', parameters('serverName'))]" ],
           "properties": {
