@@ -26,7 +26,6 @@
       "resources": [
         {
           "apiVersion": "01-01-2014",
-          "name": "[parameters('databaseName')]",
           "type": "Microsoft.Sql/servers/databases",
           "properties": {
             "edition": "Web",
