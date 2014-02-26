@@ -26,7 +26,7 @@
       "resources": [
         {
           "name": "tempdb",
-          "type": "Microsoft.Sql/servers/databases",
+          "type": "databases",
           "apiVersion": "01-01-2014",
           "properties": {
             "edition": "Web",
@@ -40,7 +40,7 @@
   "outputs": {
     "connectionString": {
       "type": "string",
-      "value": "[reference('[parameters('serverName')]').properties.connectionString]"
+      "value": "[reference(parameters('serverName')).properties.connectionString]"
     }
   }
 }
