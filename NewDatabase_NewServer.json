@@ -1,5 +1,5 @@
 {
-  "$schema": "http://schemas.management.azure.com/deploymentTemplate?api-version=2014-04-01-preview",
+  "schemaVersion": "2014-01.1.0-preview",
   "parameters": {
     "serverName": {
       "type": "string"
